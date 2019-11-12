@@ -15,6 +15,12 @@ func TestReplace(t *testing.T) {
 			blacklist: "Text",
 			expected:  "",
 		},
+		{
+			name:      "text has allowed chars",
+			text:      "More Text",
+			blacklist: "Text",
+			expected:  "More ",
+		},
 	}
 
 	for _, c := range cases {
